@@ -106,8 +106,13 @@ export async function handleWebhook(request, ownerUid, botToken, secretToken) {
         }
 
         if ("/start" === message.text) {
-            return new Response('OK');
-        }
+    await postToTelegramApi(botToken, 'sendMessage', {
+        chat_id: message.chat.id,
+        text: '欢迎来到 Cryptova'
+    });
+
+    return new Response('OK');
+}
 
         const sender = message.chat;
         const senderUid = sender.id.toString();
