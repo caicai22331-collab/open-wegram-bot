@@ -111,9 +111,6 @@ export async function handleWebhook(request, ownerUid, botToken, secretToken) {
         text: '欢迎来到 Cryptova'
     });
 
-    return new Response('OK');
-}
-
         const sender = message.chat;
         const senderUid = sender.id.toString();
         const senderName = sender.username ? `@${sender.username}` : [sender.first_name, sender.last_name].filter(Boolean).join(' ');
