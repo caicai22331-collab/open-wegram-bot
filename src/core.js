@@ -108,7 +108,7 @@ export async function handleWebhook(request, ownerUid, botToken, secretToken) {
 if ("/start" === message.text) {
     await postToTelegramApi(botToken, 'sendMessage', {
         chat_id: message.chat.id,
-        text: '欢迎来到 Cryptova'
+        text: '@okxweb6 可以先关注一下频道，频道里面有大致介绍和操作流程。'
     });
 }
 
